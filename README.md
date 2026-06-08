@@ -1,25 +1,35 @@
 <div align="center">
 
-<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    @keyframes sway {
-      0%, 100% { transform: rotate(-3deg) translateY(0px); }
-      25% { transform: rotate(2deg) translateY(-5px); }
-      75% { transform: rotate(3deg) translateY(5px); }
-    }
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); opacity: 0.15; }
-      50% { transform: translateY(-15px); opacity: 0.25; }
-    }
-    .leaf { animation: sway 4s ease-in-out infinite; }
-    .leaf-shadow { animation: float 3s ease-in-out infinite; }
-  </style>
-  <g transform="translate(20, 30)">
-    <ellipse class="leaf-shadow" cx="10" cy="25" rx="12" ry="4" fill="rgba(45, 90, 39, 0.2)"/>
-    <path class="leaf" d="M10,5 C15,15 25,18 30,28 C25,38 15,41 10,51 C5,41 0,38 0,28 C5,18 15,15 10,5 Z" fill="#7a9e6e"/>
-    <path class="leaf" d="M60,8 C68,18 78,20 86,30 C78,40 68,42 60,52 C52,42 42,40 42,30 C42,20 52,18 60,8 Z" fill="#2d5a27" style="animation-delay: 0.5s; animation-duration: 5s;"/>
-    <path class="leaf" d="M90,12 C98,22 110,24 120,34 C110,44 98,46 90,56 C82,46 70,44 70,34 C70,24 82,22 90,12 Z" fill="#a8c49a" style="animation-delay: 1s; animation-duration: 4.5s;"/>
-    <path class="leaf" d="M140,5 C150,15 165,18 175,28 C165,38 150,41 140,51 C130,41 120,38 120,28 C120,18 130,15 140,5 Z" fill="#3d7a35" style="animation-delay: 1.5s; animation-duration: 4s;"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="100%" height="100%">
+  <defs>
+    <style>
+      @keyframes sway {
+        0%, 100% { transform: rotate(-3deg) translateY(0px); }
+        25% { transform: rotate(2deg) translateY(-5px); }
+        75% { transform: rotate(3deg) translateY(5px); }
+      }
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); opacity: 0.15; }
+        50% { transform: translateY(-15px); opacity: 0.25; }
+      }
+      .leaf {
+        animation: sway 4s ease-in-out infinite;
+        transform-origin: center;
+      }
+      .leaf-shadow {
+        animation: float 3s ease-in-out infinite;
+        fill: #8fbc8f;
+      }
+      .main-leaf {
+        fill: #4a7c59;
+      }
+    </style>
+  </defs>
+  <rect width="100%" height="100%" fill="#0d1117" rx="10" />
+  <ellipse class="leaf-shadow" cx="200" cy="160" rx="40" ry="8" />
+  <g class="leaf">
+    <path class="main-leaf" d="M200,150 C200,150 160,100 160,70 C160,40 200,20 200,20 C200,20 240,40 240,70 C240,100 200,150 200,150 Z" />
+    <path d="M200,150 L200,170" stroke="#4a7c59" stroke-width="3" stroke-linecap="round" />
   </g>
 </svg>
 
